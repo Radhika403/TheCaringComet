@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caring Comet</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-bot.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <!-- <script>
-        document.getElementById('redirectButton').addEventListener('click', function () {
-            // Redirect to page2.html
-            window.location.href = 'bot1.html';
-        });
-    </script> -->
+    <script src="bot.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +16,7 @@
         <h1 class="alpha-slab"> The Caring Comet </h1>
         <div class="about">
             <div class="img half-width">
-                <img src="./images/logo.png" alt="band" width="500" height="500">
+                <img src="./images/logo.png" alt="logo" width="500" height="500">
             </div>
             <div class="about-text half-width">
                 <p> Welcome to Caring Comet, where we orbit around your emotional well-being, lighting up the path to a healthier mind and
@@ -40,8 +36,28 @@
                 <li class="a"> <button> Look at Resources </li> </button>
                 <li class="b"> <button> Find Doctors </li></button>
                 <li class="c"> <button> Take a Psychometric Test </li></button>
-                <li class="d chatbot-toggler"> <button> Go to Comet - our Emotional Support Bot </li> </button>
+                <li class="d chatbot-toggler"> 
+                    <button> Go to Comet - our Emotional Support Bot </button>
+                    <!-- <span class="material-symbols-rounded"> Chat with Comet mode_comment</span>
+                    <span class="material-symbols-outlined">close</span> -->
+                </li>
             </ul>
+        </div>
+        <div class="chatbot">
+            <header>
+                <h2>Comet</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">&#129302;</span>
+                    <p>Hi there 👋<br>How can I help you today?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
         </div>
     </div>
 </body>
