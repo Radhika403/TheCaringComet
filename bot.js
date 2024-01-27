@@ -112,7 +112,7 @@ function checkAllMessages(message) {
 }
 
 // Used to get the response
-export function getResponse(userInput) {
+function getResponse(userInput) {
     console.log(userInput)
     const splitMessage = userInput.toLowerCase();
     const response = checkAllMessages(splitMessage);
