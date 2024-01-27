@@ -57,3 +57,25 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+function showInformation() {
+
+    // Get the selected option value
+    var selectedOption = document.getElementById("resourcesDropdown").value;
+
+    // Hide all information divs
+    var informationDivs = document.querySelectorAll('.resource-info');
+    informationDivs.forEach(function (div) {
+        div.style.display = 'none';
+    });
+
+    // Show the selected information div
+    var selectedInfoDiv = document.getElementById(selectedOption + '-info');
+    if (selectedInfoDiv) {
+        selectedInfoDiv.style.display = 'block';
+    }
+    
+    var logoDiv = document.getElementById("logo-resource");
+    logoDiv.style.display = 'none';
+    
+}
