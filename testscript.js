@@ -1,6 +1,7 @@
 const quizData = [
     {
-        question: "Over the last two weeks, how often have you felt down, depressed, or hopeless?",
+        question: `Section 1: EMOTIONAL WELL-BEING
+        On the given scale, How often do you feel overwhelmed by stress?`,
         a: "Not At All",
         b: "Several days",
         c: "More than half the days",
@@ -8,7 +9,17 @@ const quizData = [
         correct: "a",
     },
     {
-        question: "Over the last two weeks, how often have you been bothered by feeling nervous, anxious, or on edge?",
+        question: `Section 1: EMOTIONAL WELL-BEING
+        On the given scale, How well do you cope with major life changes?`,
+        a: "Able to adjust quickly",
+        b: "Try my best",
+        c: "Sometimes face issues",
+        d: "Completely get distrubed by them",
+        correct: "a",
+    },
+    {
+        question: `Section 2: MOOD AND AFFECT
+        In the past two weeks, how often have you felt persistently sad or hopeless?`,
         a: "Not At All",
         b: "Several days",
         c: "More than half the days",
@@ -16,15 +27,8 @@ const quizData = [
         correct: "a",
     },
     {
-        question: "On a scale from 1 to 10, how would you rate your overall stress level in the past month?",
-        a: "Very Low (0-3)",
-        b: "Low (3-5)",
-        c: "Moderate (5-8)",
-        d: "High (8-10)",
-        correct: "a",
-    },
-    {
-        question: "How satisfied are you with your life as a whole?",
+        question: `Section 2: MOOD AND AFFECT
+        In the past two weeks, how often have you felt persistently sad or hopeless?`,
         a: "Not At All",
         b: "Several days",
         c: "More than half the days",
@@ -32,7 +36,125 @@ const quizData = [
         correct: "a",
     },
     {
-        question: "How often do you feel you have someone to talk to about your problems?",
+        question: `Section 3: ANXIETY AND WORRY
+        In the past two weeks, How often do you feel excessively worried or anxious?`,
+        a: "Not At All",
+        b: "Several days",
+        c: "More than half the days",
+        d: "Nearly every day",
+        correct: "a",
+    },
+    {
+        question: `Section 3: ANXIETY AND WORRY
+        How often do you imagine the worst for a situation?`,
+        a: "Not At All",
+        b: "Several times",
+        c: "More than half the times",
+        d: "Nearly every time",
+        correct: "a",
+    },
+    {
+        question: `Section 4: SOCIAL RELATIONSHIPS
+        How often do you feel isolated or lonely?`,
+        a: "Not At All",
+        b: "Several times",
+        c: "More than half the times",
+        d: "Nearly every time",
+        correct: "a",
+    },
+    {
+        question: `Section 4: SOCIAL RELATIONSHIPS
+        How often do you feel you have someone to talk to about your problems?`,
+        a: "Always",
+        b: "Sometimes",
+        c: "Occasionally",
+        d: "Rarely or Never",
+        correct: "a",
+    },
+    {
+        question: `Section 5: SLEEP PATTERNS
+        How many hours of sleep do you get on average per night?`,
+        a: "7-9 hours",
+        b: "5-7 hours",
+        c: "3-5 hours",
+        d: "Less than 3 hours",
+        correct: "a",
+    },
+    {
+        question: `Section 5: SLEEP PATTERNS
+        Do you experience difficulty falling asleep or staying asleep?`,
+        a: "Rarely or Never",
+        b: "Occasionally",
+        c: "Sometimes",
+        d: "Always",
+        correct: "a",
+    },
+    {
+        question: `Section 6: SUBSTANCE USE
+        Do you engage in the regular use of drugs or alcohol?`,
+        a: "Rarely or Never",
+        b: "Occasionally",
+        c: "Sometimes",
+        d: "Always",
+        correct: "a",
+    },
+    {
+        question: `Section 6: SUBSTANCE USE
+        Has substance use caused any negative consequences in your life?`,
+        a: "Rarely or Never",
+        b: "Occasionally",
+        c: "Sometimes",
+        d: "Always",
+        correct: "a",
+    },
+    {
+        question: `Section 7: COPING MECHANISM
+        Are you able to cope up with stress or difficult emotions?`,
+        a: "Rarely or Never",
+        b: "Occasionally",
+        c: "Sometimes",
+        d: "Always",
+        correct: "a",
+    },
+    {
+        question: `Section 7: COPING MECHANISM
+        Are there any activities or hobbies that bring you joy or relaxation?`,
+        a: "Yes they help",
+        b: "Sometimes it help",
+        c: "No that dont help at all",
+        d: "I dont have any hobbies",
+        correct: "a",
+    },
+    {
+        question: `Section 8: BODY IMAGE AND SELF-ESTEEM
+        How often do you feel satisfied with your body image?`,
+        a: "Always",
+        b: "Sometimes",
+        c: "Occasionally",
+        d: "Rarely or Never",
+        correct: "a",
+    },
+    {
+        question: `Section 8: BODY IMAGE AND SELF-ESTEEM
+        How would you rate your overall self-esteem?`,
+        a: "10-7",
+        b: "7-5",
+        c: "4-3",
+        d: "below 3",
+        correct: "a",
+    },
+    {
+        question: `Section 9: BODY IMAGE AND SELF-ESTEEM
+        Do you experience difficulties concentrating or making decisions?`,
+        a: "Always",
+        b: "Sometimes",
+        c: "Occasionally",
+        d: "Rarely or Never",
+        correct: "a",
+    },
+    {
+        question: `Section 9: BODY IMAGE AND SELF-ESTEEM
+        How optimistic or pessimistic do you feel about the future?`,
         a: "Always",
         b: "Sometimes",
         c: "Occasionally",
@@ -89,9 +211,6 @@ let arr = []
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer) {
-    //    if(answer === quizData[currentQuiz].correct) {
-    //        score++
-    //    }
         if(answer === "a"){
             arr.push(10);
         }else if(answer === "b"){
@@ -112,14 +231,16 @@ submitBtn.addEventListener('click', () => {
                 sum += num;
             }
             
-            if(sum >= 25 && sum < 40){
-            speak = "You are doing great! keep sailing";
-            }else if(sum >= 15 && sum < 25){
-            speak = "Hold Tight";
-            }else if(sum >= 5 && sum < 15){
-            speak = "We are with you <3";
+            if(sum >= 150 && sum <= 180){
+            speak = "You're excelling in life! Your achievements and positive attitude shine. Keep up the fantastic work, and remember, you're doing great..your journey is inspiring and impressive. Cheers to you!";
+            }else if(sum >= 120 && sum < 150){
+            speak = "Strive for continual improvement, embracing positivity in your journey. Cultivate and sustain good mental health. Your well-being matters, so prioritize self-care, resilience, and a positive mindset for a fulfilling life.";
+            }else if(sum >= 90 && sum < 120){
+            speak = "Stay focused on your goals. Divert your mind into meaningful pursuits that align with your aspirations. Channeling energy into positive endeavors contributes to personal growth and fulfillment";
+            }else if(sum >= 60 && sum < 90){
+            speak = "Consider directing your energy towards enhancing your mental well-being. Prioritize self-care, seek support when needed, and embrace positive habits. Your mental health is important; take steps towards improvement.";
             }else{
-            speak = "Kindly consult a doctor";
+                speak = "Seek professional support for your mental health. Consult a doctor to discuss concerns, receive guidance, and explore treatment options. Taking this step demonstrates strength and commitment to your well-being.";
             }
            quiz.innerHTML = `
            <h2> Your pyschometric score is ${sum}/${quizData.length*10} </h2>
@@ -133,3 +254,7 @@ submitBtn.addEventListener('click', () => {
        }
     }
 })
+
+function back(){
+    window.history.back();
+}
