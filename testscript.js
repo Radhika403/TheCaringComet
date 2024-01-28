@@ -28,7 +28,7 @@ const quizData = [
     },
     {
         question: `Section 2: MOOD AND AFFECT
-        How often do you experience mood swings hai question?`,
+        How often do you experience mood swings?`,
         a: "Not At All",
         b: "Several days",
         c: "More than half the days",
