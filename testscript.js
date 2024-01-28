@@ -28,7 +28,7 @@ const quizData = [
     },
     {
         question: `Section 2: MOOD AND AFFECT
-        In the past two weeks, how often have you felt persistently sad or hopeless?`,
+        How often do you experience mood swings hai question?`,
         a: "Not At All",
         b: "Several days",
         c: "More than half the days",
@@ -165,7 +165,7 @@ const quizData = [
 
 ];
 
-const quiz= document.getElementById('quiz')
+const quiz = document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
 const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
@@ -200,7 +200,7 @@ function deselectAnswers() {
 function getSelected() {
     let answer
     answerEls.forEach(answerEl => {
-        if(answerEl.checked) {
+        if (answerEl.checked) {
             answer = answerEl.id
         }
     })
@@ -210,51 +210,51 @@ function getSelected() {
 let arr = []
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
-    if(answer) {
-        if(answer === "a"){
+    if (answer) {
+        if (answer === "a") {
             arr.push(10);
-        }else if(answer === "b"){
+        } else if (answer === "b") {
             arr.push(7);
-        }else if(answer === "c"){
+        } else if (answer === "c") {
             arr.push(4);
-        }else{
+        } else {
             arr.push(1);
         }
 
-       currentQuiz++
+        currentQuiz++
 
-       if(currentQuiz < quizData.length) {
-           loadQuiz()
-       } else {
+        if (currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
             let sum = 0; let speak = "";
             for (let num of arr) {
                 sum += num;
             }
-            
-            if(sum >= 150 && sum <= 180){
-            speak = "You're excelling in life! Your achievements and positive attitude shine. Keep up the fantastic work, and remember, you're doing great..your journey is inspiring and impressive. Cheers to you!";
-            }else if(sum >= 120 && sum < 150){
-            speak = "Strive for continual improvement, embracing positivity in your journey. Cultivate and sustain good mental health. Your well-being matters, so prioritize self-care, resilience, and a positive mindset for a fulfilling life.";
-            }else if(sum >= 90 && sum < 120){
-            speak = "Stay focused on your goals. Divert your mind into meaningful pursuits that align with your aspirations. Channeling energy into positive endeavors contributes to personal growth and fulfillment";
-            }else if(sum >= 60 && sum < 90){
-            speak = "Consider directing your energy towards enhancing your mental well-being. Prioritize self-care, seek support when needed, and embrace positive habits. Your mental health is important; take steps towards improvement.";
-            }else{
+
+            if (sum >= 150 && sum <= 180) {
+                speak = "You're excelling in life! Your achievements and positive attitude shine. Keep up the fantastic work, and remember, you're doing great..your journey is inspiring and impressive. Cheers to you!";
+            } else if (sum >= 120 && sum < 150) {
+                speak = "Strive for continual improvement, embracing positivity in your journey. Cultivate and sustain good mental health. Your well-being matters, so prioritize self-care, resilience, and a positive mindset for a fulfilling life.";
+            } else if (sum >= 90 && sum < 120) {
+                speak = "Stay focused on your goals. Divert your mind into meaningful pursuits that align with your aspirations. Channeling energy into positive endeavors contributes to personal growth and fulfillment";
+            } else if (sum >= 60 && sum < 90) {
+                speak = "Consider directing your energy towards enhancing your mental well-being. Prioritize self-care, seek support when needed, and embrace positive habits. Your mental health is important; take steps towards improvement.";
+            } else {
                 speak = "Seek professional support for your mental health. Consult a doctor to discuss concerns, receive guidance, and explore treatment options. Taking this step demonstrates strength and commitment to your well-being.";
             }
-           quiz.innerHTML = `
-           <h2> Your pyschometric score is ${sum}/${quizData.length*10} </h2>
-           <h3 class = "prescribe">${speak}</h3>
-           <button onclick="location.reload()">Take the test again</button>
+            quiz.innerHTML = `
+           <h1 class="prescribe-head"> Your Pyschometric score is ${sum}/${quizData.length * 10} </h1>
+           <p class="prescribe">${speak}</p>
+           <button id="again" onclick="location.reload()">Take the test again</button>
            `
-           
 
-           console.log(arr);
 
-       }
+            console.log(arr);
+
+        }
     }
 })
 
-function back(){
+function back() {
     window.history.back();
 }

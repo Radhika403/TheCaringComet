@@ -1,20 +1,27 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
-*{
-  box-sizing: border-box;
-}
 body{
   background-color: black;
-  background-image: linear-gradient(315deg, #000000 0%, #000000 100%);
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 1rem;
+}
+
+.topic {
+  display: grid;
+  align-items: center;
+}
+
+.image {
+  text-align: center;
+}
+
 .quiz-container{
   background-color: #fff;
   border-radius: 10px;
@@ -22,9 +29,11 @@ body{
   width: 600px;
   overflow: hidden;
 }
+
 .quiz-header{
-  padding: 4rem;
+  padding: 3rem;
 }
+
 h2{
   padding: 1rem;
   text-align: center;
@@ -35,14 +44,17 @@ ul{
   list-style-type: none;
   padding: 0;
 }
+
 ul li{
   font-size: 1.2rem;
   margin: 1rem 0;
 }
+
 ul li label{
   cursor: pointer;
 }
-button{
+
+#submit, #again{
   background-color: #7cb888;
   color: #fff;
   border: none;
@@ -54,31 +66,16 @@ button{
   padding: 1.3rem;
 }
 
-/*
-.backbutton{
-  cursor:pointer;
-  display: inline-block;
-  text-decoration: none;
-  font-family:Arial, Helvetica, sans-serif;
-  color: rgb(232, 239, 232);
-  position: absolute;
-  border-radius: 25px;
-  padding: 0.5rem;
-  margin-left: 50px;
-  background-color: #03942f;
-}*/
-
 button:hover{
   background-color: #03942f;
 }
+
 button:focus{
   outline: none;
   background-color: #1fb612;
 }
 
 .alpha-slab{
-  direction: ltr;
-  text-align: right;
   text-decoration: solid;
   color: white;
   font-family: 'Lobster Two';
@@ -86,22 +83,35 @@ button:focus{
   text-align: center;
 }
 
-.slab{
-  direction: rtl;
-  text-align: left;
-  text-decoration: solid;
-  color:azure;
-  font-family:Arial, Helvetica, sans-serif;
+.subhead{
+  color:white;
   font-size: 2.2rem;
   text-align:center;
 }
-.image{
-  align-items: self-start;
-}
+
 .prescribe{
   color:#03942f;
   text-align: center;
-  font-size: 1rem;
-  font-style: italic;
-  font-family: cursive;
+  font-size: 1.2rem;
+  /* font-style: italic; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 1rem;
+}
+
+.prescribe-head{
+  text-align: center;
+  font-size: 1.5rem;
+  /* font-style: italic; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 1rem;
+}
+
+.back-btn button {
+  position: absolute;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  /* margin-top: 50px; */
+  margin-left: 50px;
+  background-color: #7cb888;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
