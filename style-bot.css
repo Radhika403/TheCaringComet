@@ -6,7 +6,7 @@
     width: 420px;
     background: #fff;
     border-radius: 15px;
-    overflow: hidden;
+    overflow-y: scroll;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.5);
@@ -45,9 +45,9 @@ header h2 {
 }
 
 .chatbot .chatbox {
-    overflow-y: auto;
-    height: 510px;
-    padding: 30px 20px 100px;
+    min-height: 325px;
+    padding: 15px;
+    margin: 0px !important;
 }
 
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
@@ -70,7 +70,6 @@ header h2 {
 }
 
 .chatbox .outgoing {
-    margin: 20px 0;
     justify-content: flex-end;
 }
 
@@ -113,35 +112,33 @@ header h2 {
 
 .chatbot .chat-input {
     display: flex;
-    gap: 5px;
     position: absolute;
-    bottom: 0;
     width: 100%;
     background: #fff;
-    padding: 3px 20px;
     border-top: 1px solid #ddd;
 }
 
-.chat-input textarea {
-    height: 55px;
-    width: 100%;
+.chatbot .chat-input>grammarly-extension {
+    display: none;
+}
+
+.chat-input>textarea {
+    height: 50px;
+    width: 90%;
     border: none;
     outline: none;
     resize: none;
     max-height: 180px;
-    padding: 15px 15px 15px 0;
+    padding: 15px;
     font-size: 0.95rem;
 }
 
-.chat-input span {
-    align-self: flex-end;
+.chat-input>span {
     color: #cfa3e5;
     cursor: pointer;
-    height: 55px;
     display: flex;
     align-items: center;
-    visibility: hidden;
-    font-size: 1.35rem;
+    width: 10%;
 }
 
 .chat-input textarea:valid~span {

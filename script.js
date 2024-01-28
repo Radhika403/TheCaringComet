@@ -1,6 +1,7 @@
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
+const chatbot = document.querySelector(".chatbot");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
@@ -19,11 +20,11 @@ const createChatLi = (message, className) => {
 
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
-    if (!userMessage){
+    if (!userMessage) {
         // console.log("khali")
         return;
     }
-    
+
     // Clear the input textarea and set its height to default
     chatInput.value = "";
     chatInput.style.height = `${inputInitHeight}px`;
@@ -31,12 +32,19 @@ const handleChat = () => {
     // Append the user's message to the chatbox
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
-    
+
     // console.log(typeof(userMessage))
     let res = getResponse(userMessage)
     const incomingChatLi = createChatLi(res, "incoming");
     chatbox.appendChild(incomingChatLi);
     chatbox.scrollTo(0, chatbox.scrollHeight);
+    // debugg er
+    const c = document.getElementsByClassName("chat-input");
+    // document.getElementsByClassName("chat-input").scrollIntoView(false);
+    // document.getElementsByClassName("chat-input").scrollIntoView({ block: "end" });
+    // document.getElementsByClassName("chat-input").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    chatbot.scrollBy(300, 300);
+    chatInput.focus();
 }
 
 chatInput.addEventListener("input", () => {
@@ -59,7 +67,6 @@ closeBtn.addEventListener("click", () => document.body.classList.remove("show-ch
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
 function showInformation() {
-
     // Get the selected option value
     var selectedOption = document.getElementById("resourcesDropdown").value;
 
@@ -74,8 +81,8 @@ function showInformation() {
     if (selectedInfoDiv) {
         selectedInfoDiv.style.display = 'block';
     }
-    
+
     var logoDiv = document.getElementById("logo-resource");
     logoDiv.style.display = 'none';
-    
+
 }
