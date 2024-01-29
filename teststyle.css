@@ -11,6 +11,7 @@ body{
     justify-content: space-around;
     height: 100vh;
     margin: 1rem;
+    margin-bottom: -35px;
 }
 
 .topic {
@@ -127,5 +128,4 @@ ul li label{
   align-items: center;
   justify-content: center;
   position: relative;
-  top:50px;
 }
