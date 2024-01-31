@@ -1,0 +1,207 @@
+*{
+    scroll-behavior: smooth;
+    
+    background-color: black;
+}
+
+/* section 1 - Naming  */
+.naming {
+    color: white;
+    font-family: 'Lobster Two';
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* section 2 - logo and search bar */
+
+
+
+.section_2{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+/* Type writer effect */
+.Type_writer_effect{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.tagline{
+  color: white;
+}
+.line1{
+  color: white;
+  font-weight:80px;
+}
+
+span{
+  color: #e6d66e;
+}
+
+/* Search Bar */
+.space{
+  width:450px;
+  height:30px ;
+  border-radius: 8px 0px 0px 8px;
+  background-color: white;
+  border-style: solid;
+  border-width: 4px 0px 4px 4px;
+  border-color: #e6d66e;
+}
+.search-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100px; */
+  background-color: black;
+  height: 30px;
+  
+}
+.search_logo{
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#e6d66e;
+  border-radius: 0px 8px 8px 0px;
+  border-style: solid;
+  border-width: 4px 4px 4px 0px;
+  border-color: #e6d66e;
+}
+
+/* cards*/
+.card1_left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 500px; */
+  height: 300px
+}
+.white_box{
+  background-color: white;
+  border-color: #e6d66e;
+  border-style: solid;
+  width: 550px;
+  height: 220px;
+  border-radius: 10px 0px 0px 10px;
+  border-width: 3px 0px 3px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: start; 
+  
+  
+}
+.photo{
+  height:120px ;
+  width: 130px;
+  margin: 20px 10px 10px 10px;
+  border-radius: 10px;
+}
+.photod{
+  background-color: white;
+  /* margin: 20px 10px 10px 10px; */
+  height: 150px;
+  /* height:140px ; */
+  width: 170px;
+  border-radius: 10px;
+}
+.part1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: white;
+  width: 500px;
+  height: 150px;
+  border-radius: 10px;
+}
+.Name{
+  background-color: white;
+  margin: 0px;
+  color: #e6d66e;
+}
+.intro{
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  margin-left: 10px;
+  
+  background-color: white;
+}
+.About_sec{
+  background-color: white;
+  margin: 2px 0px 0px 0px;
+}
+.part2{
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: 80px;
+  margin: 0px;
+  border-radius: 10px;
+}
+.complete_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  margin-top: 30px;
+ 
+}
+.card1_left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 500px; */
+  height: 220px;
+  
+}
+.card1_right{
+  background-color: white;
+  border-color: #e6d66e;
+  border-style: solid;
+  width: 200px;
+  height: 220px;
+  border-radius: 0px 10px 10px 0px;
+  border-width: 3px 3px 3px 0px;
+  
+}
+.booking{
+  background-color: white;
+}
+.booking_box{
+  background-color:#e6d66e;
+  border: #e6d66e;
+  border-style: solid;
+  border-radius: 5px 5px 0px 0px;
+  height: 25px;
+  width: 180px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.contact_number{
+  background-color:white;
+  border: #e6d66e;
+  border-style: solid;
+  border-radius: 0px 0px 5px 5px;
+  height: 25px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
