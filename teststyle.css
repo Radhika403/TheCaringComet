@@ -3,6 +3,7 @@
 body{
   background-color: black;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color:black;
 }
 
 .info{
@@ -108,7 +109,7 @@ ul li label{
 }
 
 .back-btn button {
-  cursor:grab;
+  cursor:pointer;
   position: absolute;
   border-radius: 1rem;
   padding: 0.5rem;

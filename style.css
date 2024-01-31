@@ -24,12 +24,13 @@ html {
 .nav-bar button {
     padding: 1rem;
     /* background-color: #530f1e; */
-    border-radius: 10px;
-    border-color: #000000;
+    border-radius: 20px;
+    border-color: #ffffff;
+    border-width: 0.5cap;
 }
 
 .a button {
-    background-color: #f6a262;
+    background-color: #f39852;
 }
 
 .b button {
@@ -74,6 +75,9 @@ html {
 .hero {
     margin-left: 100px;
     margin-right: 100px;
+    background-color: black;
+    margin-bottom:100px;
+    margin-top:-300px;
 }
 
 .half-width {
@@ -175,6 +179,7 @@ table, th, td {
 }
 
 .back-btn button{
+    cursor:pointer;
     position: absolute;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -182,4 +187,137 @@ table, th, td {
     margin-left: 50px;
     background-color: #f6a262;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Tejaswi is writing code here*/
+#wall{
+    background-color:black;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.contact-container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap: 20px;
+}
+.contact-left-title h2{
+    font-weight: 600;
+    font-size:40px;
+    color:beige;
+    margin-bottom: 5px;
+    margin-top: -45px;
+}
+.contact-left-title hr{
+    border:none;
+    width: 120px;
+    height:5px;
+    background-color:beige;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+.contact-inputs{
+    width:400px;
+    height:50px;
+    border:none;
+    outline:none;
+    padding-left:25px;
+    font-weight:500;
+    color:rgb(0, 0, 0);
+    border-radius:50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact-left textarea{
+    height:140px;
+    padding-top:15px;
+    border-radius:25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact-inputs:focus{
+    border: 3px solid rgb(176, 17, 44);
+}
+.contact-inputs::placeholder{
+    color:grey;
+}
+.contact-left button{
+    display:flex;
+    align-items:center;
+    padding:15px 30px;
+    font-size:16px;
+    color:whitesmoke;
+    border:none;
+    gap:10px;
+    border-radius:50px;
+    background: linear-gradient(270deg,rgb(188, 89, 106),rgb(136, 64, 64))
+}
+
+/*top heading ki animation*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.content {
+  background-color:black;
+  position: relative;
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: 'Lobster Two';
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fdffff;
+}
+
+.content h2:nth-child(2) {
+  color: #f9fcfe;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
 }
