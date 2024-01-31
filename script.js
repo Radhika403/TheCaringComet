@@ -84,5 +84,5 @@ function showInformation() {
 
     var logoDiv = document.getElementById("logo-resource");
     logoDiv.style.display = 'none';
-
 }
+
