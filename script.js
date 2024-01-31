@@ -33,18 +33,34 @@ const handleChat = () => {
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
-    // console.log(typeof(userMessage))
-    let res = getResponse(userMessage)
-    const incomingChatLi = createChatLi(res, "incoming");
-    chatbox.appendChild(incomingChatLi);
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-    // debugg er
-    const c = document.getElementsByClassName("chat-input");
-    // document.getElementsByClassName("chat-input").scrollIntoView(false);
-    // document.getElementsByClassName("chat-input").scrollIntoView({ block: "end" });
-    // document.getElementsByClassName("chat-input").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-    chatbot.scrollBy(300, 300);
-    chatInput.focus();
+    console.log(userMessage)
+    fetch('http://localhost:5001/api/call_python_function', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: userMessage })
+    })
+        .then(response => response.json())
+        .then(data => {
+            // document.getElementById('response').textContent = data.result;
+            // res = data.result
+            console.log(data)
+            let res = data["result"]
+            const incomingChatLi = createChatLi(res, "incoming");
+            chatbox.appendChild(incomingChatLi);
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+            // debugg er
+            const c = document.getElementsByClassName("chat-input");
+            // document.getElementsByClassName("chat-input").scrollIntoView(false);
+            // document.getElementsByClassName("chat-input").scrollIntoView({ block: "end" });
+            // document.getElementsByClassName("chat-input").scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+            chatbot.scrollBy(300, 300);
+            chatInput.focus();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
 chatInput.addEventListener("input", () => {
