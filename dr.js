@@ -3,7 +3,8 @@ function search() {
     input = document.getElementById('searchspace');
     filter = input.value.toUpperCase();
     var flag = false;
-    for(j = 0; j < 3; j++){
+    const cards = document.querySelectorAll('.complete-card').length;
+    for(j = 0; j < cards; j++){
         content = document.getElementsByClassName('complete-card')[j];
         p = content.getElementsByTagName('p');
         //console.log(p);
