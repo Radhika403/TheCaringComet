@@ -145,6 +145,7 @@ html {
 .video-box {
     display: grid;
     padding: 2rem;
+    cursor: pointer;
 }
 
 .video-box p {
