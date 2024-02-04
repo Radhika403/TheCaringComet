@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Appointment</title>
 
-    <link rel="stylesheet" href="dr_style.css">
-    <script src="dr.js"></script>
+    <link rel="stylesheet" href="doctorstyle.css">
+    <script src="doctor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,7 +34,7 @@
     <!--  Section 3 Type writer effect  -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <div class="Type_writer_effect">
-        <h1 class="line1"> Book 1:1 <span class="auto_typing_word"></span> </h1> 
+        <h1 class="line1"> Book 1:1 <span class="auto_typing_word"></span> </h1>
     </div>
     <script>
         var typed = new Typed(".auto_typing_word", {
@@ -50,15 +50,16 @@
     <!-- Section 4 - Search bar  -->
     <div class="search-bar">
         <div class="typing_space">
-            <input class="space" placeholder="Search your doctor" id ="searchspace">
+            <input class="space" placeholder="Search your doctor" id="searchspace">
         </div>
 
         <div class="search_logo">
-            <i class="fa-solid fa-magnifying-glass" style="color: white; background-color:#e6d66e; cursor:pointer" onclick = "search()"></i>
+            <i class="fa-solid fa-magnifying-glass" style="color: white; background-color:#e6d66e; cursor:pointer"
+                onclick="search()"></i>
         </div>
     </div>
     <div>
-        <h5 id="msg" style = "color: white; margin-left:45%;"></h5>
+        <h5 id="msg" style="color: white; margin-left:45%;"></h5>
     </div>
 
     <!-- Section 5 : Doctor Cards  -->
@@ -70,17 +71,19 @@
                     <div class="photod">
                         <img class="photo" src="./images/manish.jpeg">
                     </div>
-        
+
                     <!-- Name and one line -->
                     <div class="intro">
                         <p class="name"> Dr. Manish Jain</p>
-                        <p class="about-sec">Dr. Manish Jain is an experienced psychiatrist, based in Patparganj, Delhi with a career spanning 14 years. He is a
-                        reputed member of the Indian Psychiatric Society and Indian Association of Private Psychiatry. Dr. Manish Jain is a
-                        psychiatrist renowned for his ethical practices and post treatment patient care.</p>
+                        <p class="about-sec">Dr. Manish Jain is an experienced psychiatrist, based in Patparganj, Delhi
+                            with a career spanning 14 years. He is a
+                            reputed member of the Indian Psychiatric Society and Indian Association of Private
+                            Psychiatry. Dr. Manish Jain is a
+                            psychiatrist renowned for his ethical practices and post treatment patient care.</p>
                     </div>
-        
+
                 </div>
-        
+
                 <div class="part2">
                     <p> Therapist</p>
                     <p> Adult Psychiatrist</p>
@@ -90,29 +93,34 @@
                     <p> Panic Disorder </p>
                 </div>
             </div>
-        
+
             <div class="card-right">
-                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;20+ years of experience </p>
-                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi, English </p>
-                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Offline, Delhi </p>
-        
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;20+ years of
+                    experience </p>
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks:
+                    Hindi, English </p>
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Offline,
+                    Delhi </p>
+
                 <p class="fee">
                     <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
-                            class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;1000 /- </span>
+                            class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;1000
+                        /- </span>
                     <span style="background-color: white; display: inline;">Per Session</span>
                 </p>
-                
+
                 <!-- <h5 style="background-color: white;">per session</h5> -->
                 <div class="booking">
                     <div class="booking_box">
                         <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
                     </div>
                     <div class="contact_number">
-                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
-                                style="background-color: white;"></i>&nbsp;&nbsp; 011 3040 3040</h4>
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i
+                                class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp; 011 3040
+                            3040</h4>
                     </div>
                 </div>
-        
+
             </div>
         </div>
         <div class="complete-card">
@@ -122,18 +130,20 @@
                     <div class="photod">
                         <img class="photo" src="./images/vishal.png">
                     </div>
-        
+
                     <!-- Name and one line -->
                     <div class="intro">
                         <p class="name"> Dr. Vishal Chhabra</p>
-                        <p class="about-sec">Dr. Vishal Chhabra is a trusted Psychiatrist in Prashant Vihar, Delhi. He has been a successful Psychiatrist for the
-                        last 17 years.He has received 33 excellent reviews from her patients who are happy with his treatment. He has received 33
-                        excellent reviews from hir patients.
+                        <p class="about-sec">Dr. Vishal Chhabra is a trusted Psychiatrist in Prashant Vihar, Delhi. He
+                            has been a successful Psychiatrist for the
+                            last 17 years.He has received 33 excellent reviews from her patients who are happy with his
+                            treatment. He has received 33
+                            excellent reviews from hir patients.
                         </p>
                     </div>
-        
+
                 </div>
-        
+
                 <div class="part2">
                     <p> Therapist</p>
                     <p> Neuropsychiatrist</p>
@@ -141,31 +151,36 @@
                     <p> Consultant </p>
                 </div>
             </div>
-        
+
             <div class="card-right">
-                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;17+ years of experience
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;17+ years of
+                    experience
                 </p>
-                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi, English </p>
-                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks:
+                    Hindi, English </p>
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online,
+                    Offline
                 </p>
-        
+
                 <p class="fee">
                     <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
-                            class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;800 /- </span>
+                            class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;800
+                        /- </span>
                     <span style="background-color: white;">Per Session</span>
                 </p>
-                
+
                 <!-- <h5 style="background-color: white;">per session</h5> -->
                 <div class="booking">
                     <div class="booking_box">
                         <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
                     </div>
                     <div class="contact_number">
-                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
-                                style="background-color: white;"></i>&nbsp;&nbsp; 989 105 5258</h4>
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i
+                                class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp; 989 105 5258
+                        </h4>
                     </div>
                 </div>
-        
+
             </div>
         </div>
         <div class="complete-card">
@@ -175,17 +190,19 @@
                     <div class="photod">
                         <img class="photo" src="./images/vikas.jpeg">
                     </div>
-        
+
                     <!-- Name and one line -->
                     <div class="intro">
                         <p class="name"> Dr. Vikas Moun</p>
-                        <p class="about-sec">Vikas has been a successful Psychiatrist for the last 2 years. He is a qualified MD - psychiatry. He strongly believe in
-                        ethics; as a health provider being ethical is not just a remembered value, but a strongly observed one.
+                        <p class="about-sec">Vikas has been a successful Psychiatrist for the last 2 years. He is a
+                            qualified MD - psychiatry. He strongly believe in
+                            ethics; as a health provider being ethical is not just a remembered value, but a strongly
+                            observed one.
                         </p>
                     </div>
-        
+
                 </div>
-        
+
                 <div class="part2">
                     <p> Therapist</p>
                     <p> Forensic Psychiatrist</p>
@@ -193,35 +210,40 @@
                     <p> Geriatric Psychiatrist </p>
                 </div>
             </div>
-        
+
             <div class="card-right">
-                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;14+ years of experience
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;14+ years of
+                    experience
                 </p>
-                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi,
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks:
+                    Hindi,
                     English </p>
-                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online,
+                    Offline
                 </p>
-        
+
                 <p class="fee">
                     <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
-                        class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;400 /- </span>
+                            class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;400
+                        /- </span>
                     <span style="background-color: white;">Per Session</span>
                 </p>
-        
+
                 <div class="booking">
                     <div class="booking_box">
                         <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
                     </div>
                     <div class="contact_number">
-                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
-                                style="background-color: white;"></i>&nbsp;&nbsp; 794 711 5139</h4>
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i
+                                class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp; 794 711 5139
+                        </h4>
                     </div>
                 </div>
-        
+
             </div>
         </div>
     </div>
-       
+
 </body>
 
 </html>
