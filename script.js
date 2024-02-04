@@ -33,7 +33,6 @@ const createChatLi = (message, className) => {
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
     if (!userMessage) {
-        // console.log("khali")
         return;
     }
 
@@ -55,8 +54,6 @@ const handleChat = () => {
     })
         .then(response => response.json())
         .then(data => {
-            // document.getElementById('response').textContent = data.result;
-            // res = data.result
             console.log(data)
             let res = data["result"]
             const incomingChatLi = createChatLi(res, "incoming");

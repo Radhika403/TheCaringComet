@@ -4,7 +4,7 @@ function search() {
     filter = input.value.toUpperCase();
     var flag = false;
     const cards = document.querySelectorAll('.complete-card').length;
-    for(j = 0; j < cards; j++){
+    for (j = 0; j < cards; j++) {
         content = document.getElementsByClassName('complete-card')[j];
         p = content.getElementsByTagName('p');
         //console.log(p);
@@ -21,9 +21,9 @@ function search() {
         }
     }
     var mssg = document.getElementById("msg");
-    if(flag == false){
+    if (flag == false) {
         mssg.innerHTML = "Sorry, No doctor found!! 🥺";
-    }else{
+    } else {
         mssg.innerHTML = " Doctor Found!! 🎉";
     }
 }

@@ -19,7 +19,6 @@ class MyHandler(SimpleHTTPRequestHandler):
 
             input_value = input_data["input"]
             output_value = get_response(input_value)
-            # print(output_value)
 
             output_data = {'result': output_value}
 

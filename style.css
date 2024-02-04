@@ -101,7 +101,7 @@ html {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    
+
 }
 
 .resources-dropdown {
@@ -161,155 +161,154 @@ html {
     font-size: 1.2rem;
 }
 
-table, th, td {
+table,
+th,
+td {
     padding: 0.5rem 5rem 0.5rem 5rem;
     border: 1px solid;
     border-collapse: collapse;
 }
 
-.back-btn button{
-    cursor:pointer;
+.back-btn button {
+    cursor: pointer;
     position: absolute;
     border-radius: 1rem;
     padding: 0.5rem;
     margin-left: 50px;
     background-color: #f6a262;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#wall h1{
+#wall h1 {
     font-size: 4rem;
 }
 
-#wall{
+#wall {
     margin-top: 5rem;
 }
 
 
-.contact-container{
+.contact-container {
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 
-.contact-left{
+.contact-left {
     display: grid;
     gap: 20px;
     width: 30%;
-} 
+}
 
-.contact-left-title h2{
+.contact-left-title h2 {
     font-weight: 600;
     font-size: 2rem;
-    color:white;
+    color: white;
     text-align: center;
 }
 
-.contact-left-title hr{
+.contact-left-title hr {
     border: none;
     width: 80%;
     height: 4px;
-    background-color:rgb(255, 255, 255);
-    border-radius:10px;
-    margin-bottom:20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.contact-inputs{
-    border:none;
-    outline:none;
+.contact-inputs {
+    border: none;
+    outline: none;
     font-size: 1rem;
     padding: 1rem;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     font-family: 'Gill Sans', ' Gill Sans MT', Calibri, ' Trebuchet MS', sans-serif;
 }
 
-.contact-left textarea{
+.contact-left textarea {
     font-family: 'Gill Sans', ' Gill Sans MT', Calibri, ' Trebuchet MS', sans-serif;
 }
 
- 
-.contact-inputs:focus{
+
+.contact-inputs:focus {
     border: 3px solid rgb(176, 17, 44);
 }
 
 
-.contact-inputs::placeholder{
-    color:grey;
+.contact-inputs::placeholder {
+    color: grey;
 }
 
 
-.contact-left button{
+.contact-left button {
     /* display:flex; */
     /* align-items:center; */
     padding: 1rem;
     font-size: 1rem;
-    color:whitesmoke;
-    border:none;
-    gap:10px;
-    border-radius:50px;
-    background: linear-gradient(270deg,rgb(188, 89, 106),rgb(136, 64, 64))
+    color: whitesmoke;
+    border: none;
+    gap: 10px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, rgb(188, 89, 106), rgb(136, 64, 64))
 }
 
 /* main index heading animation*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 .content {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-  font-family: 'Lobster Two';
-  font-size: 5rem;
-  position: relative;
-  padding: 5rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lobster Two';
+    font-size: 5rem;
+    position: relative;
+    padding: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content h2 {
-  position: absolute;
+    position: absolute;
 }
 
 .content h2:nth-child(1) {
-  color: transparent;
-  -webkit-text-stroke: 2px #fdffff;
+    color: transparent;
+    -webkit-text-stroke: 2px #fdffff;
 }
 
 .content h2:nth-child(2) {
-  color: #f9fcfe;
-  animation: animate 4s ease-in-out infinite;
-}  
+    color: #f9fcfe;
+    animation: animate 4s ease-in-out infinite;
+}
 
 @keyframes animate {
-  0%,
-  100% {
-    clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
-  }
 
-  50% {
-    clip-path: polygon(
-      0% 60%,
-      15% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    );
-  }
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
 }
