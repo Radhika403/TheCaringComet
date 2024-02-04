@@ -10,7 +10,7 @@
 Caring Comet is your go-to platform for mental wellness and good health. We're on a mission to help you build a positive mindset for life's challenges. This is your one-stop destination for a healthier you, our platform is all about making well-being simple and accessible to all. Let this Comet illuminate your path to emotional well-being!!
 
 <h3>Features:</h3>
-The 5 pillars that form the backbone of the platform are:
+The 5 pillars that form the backbone of the platform are:<br>
 1. <b>Resource Library 📚</b>
 <p align="center">
   <img src= "./images/resourcesdemo.png" alt="resourcesdemo”" width="250"/>
