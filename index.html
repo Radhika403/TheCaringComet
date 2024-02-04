@@ -74,7 +74,7 @@
     <div id="wall">
         <h1 class="alpha-slab"> Leave Your Thoughts Here</h1>
         <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" onsubmit="resetForm()">
                 <div class="contact-left-title">
                     <h2>Get In Touch</h2>
                     <hr>
@@ -84,6 +84,7 @@
                 <input type="email" name="email" placeholder="Enter Your Email" class="contact-inputs" required>
                 <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
                 <button type="submit">Submit</button>
+                <h4 id="msg" style = "color: white;"></h4>
             </form>
             <div class="contact-right">
                 <image src="images/astronautCropped.gif"></image>

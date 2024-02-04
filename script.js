@@ -114,3 +114,9 @@ function showInformation() {
     logoDiv.style.display = 'none';
 }
 
+function resetForm() {
+    var mssg = document.getElementById("msg");
+    mssg.innerHTML = "Form successfully submitted!!"
+    document.querySelector(".contact-left").reset();
+}
+
