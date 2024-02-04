@@ -1,15 +1,15 @@
 <div align = "center">
-    <h1>Caring Comet ☄️</h1>
+    <h1><b>Caring Comet ☄️</b></h1>
     <h5>Illuminating Your Path To Emotional Well-Being</h5>
 </div>
 <p align="center">
   <img src= "./images/logo.png" alt="logo”" width="350"/>
 </p>
 
-##Abstract:
+<h3>Abstract:</h3>
 Caring Comet is your go-to platform for mental wellness and good health. We're on a mission to help you build a positive mindset for life's challenges. This is your one-stop destination for a healthier you, our platform is all about making well-being simple and accessible to all. Let this Comet illuminate your path to emotional well-being!!
 
-##Features:
+<h3>Features:</h3>
 The 5 pillars that form the backbone of the platform are:
 1. <b>Resource Library 📚</b>
 <p align="center">
@@ -39,7 +39,7 @@ Seamless access to contact details for easy booking when needed.
 
 3. <b>Psychometric Test 📝</b>
 <p align="center">
-  <img src= "./images/psychodemo.png" alt="pyschodemo”" width="250"/>
+  <img src= "./images/pyschodemo.png" alt="pyschodemo”" width="250"/>
 </p>
 User-Friendly Assessment:
 Engage in a user-friendly psychometric test for mental well-being assessment.
@@ -66,12 +66,12 @@ Receive assistance and information on mental wellness buzzwords and topics.
 </p>
 This allows the users to fill in whatever they wish to share with our team, and the real-time form response will be received at our end. This allows us to get back to them personally with possible solutions.
 
-##Tech-Stack:
+<h3>Tech-Stack:</h3>
 The tech-stack used consists of:
 1.Python
 2.Natural Language Processing
 3.HTML,CSS,Javascript
 4.API,Deplyment
 
-##How to use and set up??
+<h3>How to use and set up??</h3>
 
