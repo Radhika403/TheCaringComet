@@ -6,7 +6,7 @@ from NLP.bot import get_response
 class MyHandler(SimpleHTTPRequestHandler):
     def do_OPTIONS(self):
         self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
+        self.send_header('Access-Control-Allow-Origin', '*')  # Allow access from any origin
         self.send_header('Access-Control-Allow-Methods', 'POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.end_headers()
@@ -24,7 +24,7 @@ class MyHandler(SimpleHTTPRequestHandler):
 
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
-            self.send_header('Access-Control-Allow-Origin', 'http://127.0.0.1:5500')
+            self.send_header('Access-Control-Allow-Origin', '*')  # Allow access from any origin
             self.end_headers()
             self.wfile.write(json.dumps(output_data).encode('utf-8'))
         else:

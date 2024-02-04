@@ -167,5 +167,5 @@ def get_response(user_input):
   response = check_all_messages(split_message)
 
   # Translate back to the detected language
-  langtext = GoogleTranslator(source='en', target=detected_language).translate(response)
-  return langtext
+  #langtext = GoogleTranslator(source='en', target=detected_language).translate(response)
+  return response
