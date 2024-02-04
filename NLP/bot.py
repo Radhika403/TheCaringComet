@@ -1,6 +1,9 @@
 import random
-# information types question
+import re
+from deep_translator import GoogleTranslator
+import langid
 
+# information types question
 q1 = "Mental health is a state of mental well-being that enables people to cope with stress. The need for action on mental health is indisputable and urgent."
 q2="Depression is a mood disorder characterized by persistent feelings of sadness, hopelessness, and a lack of interest or pleasure in daily activities."
 q3= "Anxiety is a normal emotion that causes increased alertness, fear, and physical signs, such as a rapid heart rate."
@@ -15,7 +18,6 @@ q11=" Relaxation methods include deep breathing, progressive muscle relaxation, 
 q12="It improves interpersonal relationships and communication skills to alleviate symptoms."
 
 #  emotional expressions words
-
 q13 = "Dont be sad, cheer up. I am here to assist you"
 q14 = "Good to see that you are happy today :)"
 q15= "What makes you feel anxious ? Is it the work load  or something else that troubles you dear ?"
@@ -31,7 +33,6 @@ q21="Would you like to talk more about what's been on your mind? Sometimes expre
 
 
 # Promoting website
-
 q22="Yes, a doctor's help can be a good option. Please go ahead on our website to book your appointment with our experts"
 q23="I appreciate your proactive approach,to get a personalized mental health report, I recommend taking our psychometric test  "
 q24="I appreciate your proactive approach,to get a personalized mental health report, I recommend taking our psychometric test  "
@@ -39,6 +40,7 @@ q25="Yep, we've got self-help covered. Visit Resources section for more interact
 q26="Gotcha! Give our Resources section a spin for some tried-and-true mental wellness hacks."
 q27="In that case have you ever tried our Resources section? It's like a cool treasure of mental wellness strategies waiting to be discovered."
 q28="Sure! Explore our Resources section to learn from real experiences!"
+
 # Chit chat
 q29 = "Yes, I'll be happy to assist you :)"
 q30 = "Why don't scientists trust atoms?/n Because they make up everything!"
@@ -62,7 +64,6 @@ def unknown():
         random.randrange(5)]
     return response
 
-import re
 
 def message_probability(user_message, recognised_words, single_response=False, required_words=[]):
     message_certainty = 0
@@ -105,7 +106,8 @@ def check_all_messages(message):
     response('Thank you!', ['i', 'love', 'you'], required_words=['love', 'you'])
     response('Great to hear!',['fine','good','doing','well'],single_response = True)
     response('I am Comet-the bot! I have got resources, coping techniques, and a listening ear. Feel free to ask for advice or share your feelings! 🌈 ',['who','are','you'],required_words = ['who','are','you'])
-    # Longer responses
+    
+    # Longer responses -------------------------------------------------------------------------------------------------
     response(q1, ['what','mental','health'],required_words= ['mental','health'] )
     response(q2, ['what','depression'],required_words= ['depression'] )
     response(q3, ['what','anxiety'],required_words= ['anxiety'] )
@@ -118,11 +120,6 @@ def check_all_messages(message):
     response(q10, ['social','anxiety'],required_words= ['social','anxiety'] )
     response(q11, ['relaxation','methods','techniques'],required_words= ['relaxation'] )
     response(q12, ['what','interpersonal','therapy'],required_words= ['social','anxiety'] )
-
-
-
-
-
     response(q13,['I','feel','sad'],required_words = ['sad'])
     response(q14,['happy'],required_words = ['happy'])
     response(q15,['anxiety'],required_words = ['anxiety'])
@@ -135,8 +132,6 @@ def check_all_messages(message):
     response(q19,['feel','peer','pressure'],required_words = ['peer','pressure'])
     response(q20,['feel','demotivated'],required_words = ['demotivated'])
     response(q21,['feel','confused'],required_words = ['confused'])
-
-
     response(q22,['doctor'],required_words = ['doctor'])
     response(q23,['mental','report'],required_words = ['report'])
     response(q24,['mental','wellness','test'],required_words = ['test'])
@@ -155,23 +150,20 @@ def check_all_messages(message):
     response(q36,['you','are','stupid'],required_words = ['you','are','stupid'])
     response(q37,['you','are','smart'],required_words = ['you','are','smart'])
 
-
-
     best_match = max(highest_prob_list, key=highest_prob_list.get)
     # print(highest_prob_list)
     # print(f'Best match = {best_match} | Score: {highest_prob_list[best_match]}')
 
     return unknown() if highest_prob_list[best_match] < 1 else best_match
 
-from deep_translator import GoogleTranslator
-import langid
+
 
 def get_response(user_input):
+  # Translate to english in case any other language
   detected_language, _ = langid.classify(user_input)
   engtext = GoogleTranslator(source = detected_language, target='en').translate(user_input)
 
   split_message = re.split(r'\s+|[,;?!.-]\s*', engtext.lower())
-
   response = check_all_messages(split_message)
 
   # Translate back to the detected language
