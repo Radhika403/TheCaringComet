@@ -188,19 +188,17 @@ span {
   background-color: white;
   display: grid;
   margin: 1rem;
-  /* border-color: #e6d66e; */
-  /* border-style: solid; */
-  /* width: 200px;
-  height: 220px; */
-  /* border-radius: 0px 10px 10px 0px; */
-  /* border-width: 3px 3px 3px 0px; */
 }
 
 .card-right p {
   background-color: white;
-  /* margin: 14px 2px 1px 0px;  */
   font-weight: lighter;
   font-style: oblique;
+}
+
+.fee > *{
+  font-style: normal;
+  font-weight: bolder;
 }
 
 .booking {
