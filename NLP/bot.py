@@ -163,9 +163,18 @@ def check_all_messages(message):
 
     return unknown() if highest_prob_list[best_match] < 1 else best_match
 
-# Used to get the response
+from deep_translator import GoogleTranslator
+import langid
+
 def get_response(user_input):
-    split_message = re.split(r'\s+|[,;?!.-]\s*', user_input.lower())
-    response = check_all_messages(split_message)
-    #print(response)
-    return response
+  detected_language, _ = langid.classify(user_input)
+  engtext = GoogleTranslator(source = detected_language, target='en').translate(user_input)
+
+  split_message = re.split(r'\s+|[,;?!.-]\s*', engtext.lower())
+
+  response = check_all_messages(split_message)
+
+  # Translate back to the detected language
+  langtext = GoogleTranslator(source='en', target=detected_language).translate(response)
+  return langtext
+
