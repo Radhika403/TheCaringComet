@@ -1,4 +1,6 @@
 import random
+#pip install langid
+#pip install -U deep-translator
 # information types question
 
 q1 = "Mental health is a state of mental well-being that enables people to cope with stress. The need for action on mental health is indisputable and urgent."
@@ -177,4 +179,3 @@ def get_response(user_input):
   # Translate back to the detected language
   langtext = GoogleTranslator(source='en', target=detected_language).translate(response)
   return langtext
-
