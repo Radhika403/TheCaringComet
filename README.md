@@ -67,11 +67,11 @@ Receive assistance and information on mental wellness buzzwords and topics.
 This allows the users to fill in whatever they wish to share with our team, and the real-time form response will be received at our end. This allows us to get back to them personally with possible solutions.
 
 <h3>Tech-Stack:</h3>
-The tech-stack used consists of:
-1.Python
-2.Natural Language Processing
-3.HTML,CSS,Javascript
-4.API,Deplyment
+The tech-stack used consists of:<br>
+1.Python<br>
+2.Natural Language Processing<br>
+3.HTML,CSS,Javascript<br>
+4.API,Deplyment<br>
 
 <h3>How to use and set up??</h3>
 
