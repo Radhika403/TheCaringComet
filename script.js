@@ -8,6 +8,18 @@ const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
+const btn = document.getElementById('access-chatbot');
+
+btn.addEventListener('click', function handleClick() {
+    const initialText = 'Go to Comet - our Emotional Support Bot';
+    if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+        btn.textContent = 'Close chats';
+        console.log("Change mein aaya toh")
+    } else {
+        btn.textContent = initialText;
+    }
+});
+
 const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
@@ -100,5 +112,11 @@ function showInformation() {
 
     var logoDiv = document.getElementById("logo-resource");
     logoDiv.style.display = 'none';
+}
+
+function resetForm() {
+    var mssg = document.getElementById("msg");
+    mssg.innerHTML = "Form successfully submitted!!"
+    document.querySelector(".contact-left").reset();
 }
 
