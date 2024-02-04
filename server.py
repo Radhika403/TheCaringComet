@@ -17,11 +17,9 @@ class MyHandler(SimpleHTTPRequestHandler):
             post_data = self.rfile.read(content_length)
             input_data = json.loads(post_data.decode('utf-8'))
 
-            # Perform computation with the input data
             input_value = input_data["input"]
-            # output_value = input_value * input_value  # Replace with your actual computation
             output_value = get_response(input_value)
-            print(output_value)
+            # print(output_value)
 
             output_data = {'result': output_value}
 

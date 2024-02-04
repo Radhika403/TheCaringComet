@@ -8,6 +8,18 @@ const sendChatBtn = document.querySelector(".chat-input span");
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
+const btn = document.getElementById('access-chatbot');
+
+btn.addEventListener('click', function handleClick() {
+    const initialText = 'Go to Comet - our Emotional Support Bot';
+    if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+        btn.textContent = 'Close chats';
+        console.log("Change mein aaya toh")
+    } else {
+        btn.textContent = initialText;
+    }
+});
+
 const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
