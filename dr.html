@@ -16,274 +16,202 @@
 </head>
 
 <body>
-    <div class="Outer">
+    <!--  section 1 - Naming   -->
+    <div class="heading">
+        <h1 class="naming"> The Caring Comet </h1>
+    </div>
 
-        <!--  section 1 - Naming   -->
-        <div class="heading">
-            <h1 class="naming"> The Caring Comet </h1>
+    <!-- section 2 Tagline -->
+    <div class="section_2">
+        <h4 class="tagline">Connecting Minds, Creating Hope: Schedule Your Wellness Today.</h4>
+    </div>
 
+
+    <!--  Section 3 Type writer effect  -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="Type_writer_effect">
+        <h1 class="line1"> Book 1:1 <span class="auto_typing_word"></span> </h1> 
+    </div>
+    <script>
+        var typed = new Typed(".auto_typing_word", {
+            strings: ["Consultation Appointment", "Therapy Session"],
+            typeSpeed: 50,
+            backspeed: 5000000,
+
+            loop: true
+
+        })
+    </script>
+
+    <!-- Section 4 - Search bar  -->
+    <div class="search-bar">
+        <div class="typing_space">
+            <input class="space" placeholder="Search your doctor" id ="searchspace">
         </div>
 
-        <!-- section 2 Tagline -->
-
-        <div class="section_2">
-            <h4 class="tagline">Connecting Minds, Creating Hope: Schedule Your Wellness Today.</h4>
+        <div class="search_logo">
+            <i class="fa-solid fa-magnifying-glass" style="color: white; background-color:#e6d66e; cursor:pointer" onclick = "search()"></i>
         </div>
+    </div>
+    <div>
+        <h5 id="msg" style = "color: white; margin-left:45%;"></h5>
+    </div>
 
-
-        <!--  Section 3 Typw writer effect  -->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-        <div class="Type_writer_effect">
-
-            <h1 class="line1"> Book 1:1 <span class="auto_typing_word"></span> </h1>
-
-
-
-
-        </div>
-        <script>
-            var typed = new Typed(".auto_typing_word", {
-                strings: ["Consultation Appointment ... ", "Therapy Session ..."],
-                typeSpeed: 50,
-                backspeed: 5000000,
-
-                loop: true
-
-            })
-        </script>
-
-        <!-- Section 4 - Search bar  -->
-        <div class="search-bar">
-            <div class="typing_space">
-                <input class="space" placeholder="   Search your doctor" id ="searchspace">
-            </div>
-
-            <div class="search_logo">
-                <i class="fa-solid fa-magnifying-glass" style="color: white; background-color:#e6d66e; cursor:pointer" onclick = "search()"></i>
-            </div>
-        </div>
-        <div>
-            <h5 id="msg" style = "color: white; margin-left:45%;"></h5>
-        </div>
-
-
-        <!-- Section 5 : Dr .Cards  -->
-        <div class="complete_card">
-            <div class="card1_left">
-
-                <div class="white_box">
-                    <div class="part1">
-                        <!-- photo -->
-                        <div class="photod">
-                            <img class="photo" src="./images/bruno.jpg">
-                        </div>
-
-                <!-- Name and one line -->
-                <div class="intro">
-                  <h1 class="Name" style="margin-bottom: 10px;"> Dr. Manish Jain </h1>
-                  <h4 class="About_sec" style="word-wrap: normal;font-style: italic ;font-weight: lighter;">Hey there, I'm here as a mental health therapist committed to guiding you through challenges with empathy and evidence-based support...</h4>
+    <!-- Section 5 : Doctor Cards  -->
+    <div class="cards">
+        <div class="complete-card">
+            <div class="card-left half-width">
+                <div class="part1">
+                    <!-- photo -->
+                    <div class="photod">
+                        <img class="photo" src="./images/manish.jpeg">
+                    </div>
+        
+                    <!-- Name and one line -->
+                    <div class="intro">
+                        <p class="name"> Dr. Manish Jain</p>
+                        <p class="about-sec">Dr. Manish Jain is an experienced psychiatrist, based in Patparganj, Delhi with a career spanning 14 years. He is a
+                        reputed member of the Indian Psychiatric Society and Indian Association of Private Psychiatry. Dr. Manish Jain is a
+                        psychiatrist renowned for his ethical practices and post treatment patient care.</p>
+                    </div>
+        
                 </div>
-
-                    </div>
-
-                    <div class="part2">
-                        <h5
-                            style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 60px;margin: 0px ;height: 20px; align-content: center;">
-                            Therapist </h5>
-                        <h5
-                            style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid; padding: 3px; width: 70px;margin: 0px ;height: 20px; ">
-                            Psychiatrist</h5>
-                        <h5
-                            style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 100px;margin: 0px ;height: 20px;">
-                            Couple Therapist </h5>
-                        <h5
-                            style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px">
-                            Consultant </h5>
-                        <h5
-                            style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px">
-                            Depression </h5>
-
-
-                    </div>
-
-
+        
+                <div class="part2">
+                    <p> Therapist</p>
+                    <p> Adult Psychiatrist</p>
+                    <!-- <p> Couple Therapist </p> -->
+                    <p> Consultant </p>
+                    <p> Sexologist </p>
+                    <p> Panic Disorder </p>
                 </div>
             </div>
-
-    <div class="card1_right">
-        <h4 style="background-color: white; margin: 14px 2px 1px 0px; font-weight: lighter; font-style: oblique;"> <i class="fa-solid fa-stethoscope" style="background-color: white;"></i>&nbsp;&nbsp;14+ years of experience </h4>
-        <h4 style="background-color: white; margin: 14px 2px 1px 0px;">
-        <span style="background-color: white;font-weight: lighter;color: black; margin: 14px 2px 1px 0px;" ><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp;Speaks:</span>
-            <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;"> Hindi, English</span>
-        </h4>
-<h4 style="background-color: white; margin: 14px 2px 14px 0px;">
-        <!-- <h4 style="background-color: white;margin: 14px 2px 14px 0px;font-weight: lighter;font-style: oblique"><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline </h4> -->
-        <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black;" ><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode:</span>
-            <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;"> Online, Offline</span>
-</h4>
+        
+            <div class="card-right">
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;20+ years of experience </p>
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi, English </p>
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Offline, Delhi </p>
+        
+                <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
+                        class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;1000 /- </span>
+                <span style="background-color: white; display: inline;">Per Session</span>
+        
+                <!-- <h5 style="background-color: white;">per session</h5> -->
+                <div class="booking">
+                    <div class="booking_box">
+                        <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
+                    </div>
+                    <div class="contact_number">
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
+                                style="background-color: white;"></i>&nbsp;&nbsp; 011 3040 3040</h4>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <div class="complete-card">
+            <div class="card-left half-width">
+                <div class="part1">
+                    <!-- photo -->
+                    <div class="photod">
+                        <img class="photo" src="./images/vishal.png">
+                    </div>
+        
+                    <!-- Name and one line -->
+                    <div class="intro">
+                        <p class="name"> Dr. Vishal Chhabra</p>
+                        <p class="about-sec">Dr. Vishal Chhabra is a trusted Psychiatrist in Prashant Vihar, Delhi. He has been a successful Psychiatrist for the
+                        last 17 years.He has received 33 excellent reviews from her patients who are happy with his treatment. He has received 33
+                        excellent reviews from hir patients.
+                        </p>
+                    </div>
+        
+                </div>
+        
+                <div class="part2">
+                    <p> Therapist</p>
+                    <p> Neuropsychiatrist</p>
+                    <p> Addiction Psychiatrist </p>
+                    <p> Consultant </p>
+                </div>
+            </div>
+        
+            <div class="card-right">
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;17+ years of experience
+                </p>
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi, English </p>
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline
+                </p>
+        
+                <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
+                        class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;800 /- </span>
+                <span style="background-color: white;">Per Session</span>
+        
+                <!-- <h5 style="background-color: white;">per session</h5> -->
+                <div class="booking">
+                    <div class="booking_box">
+                        <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
+                    </div>
+                    <div class="contact_number">
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
+                                style="background-color: white;"></i>&nbsp;&nbsp; 989 105 5258</h4>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <div class="complete-card">
+            <div class="card-left half-width">
+                <div class="part1">
+                    <!-- photo -->
+                    <div class="photod">
+                        <img class="photo" src="./images/vikas.jpeg">
+                    </div>
+        
+                    <!-- Name and one line -->
+                    <div class="intro">
+                        <p class="name"> Dr. Vikas Moun</p>
+                        <p class="about-sec">Vikas has been a successful Psychiatrist for the last 2 years. He is a qualified MD - psychiatry. He strongly believe in
+                        ethics; as a health provider being ethical is not just a remembered value, but a strongly observed one.
+                        </p>
+                    </div>
+        
+                </div>
+        
+                <div class="part2">
+                    <p> Therapist</p>
+                    <p> Forensic Psychiatrist</p>
+                    <p> Sexologist </p>
+                    <p> Geriatric Psychiatrist </p>
+                </div>
+            </div>
+        
+            <div class="card-right">
+                <p><i class="fa-solid fa-stethoscope" style="background-color: white;"> </i> &nbsp;&nbsp;14+ years of experience
+                </p>
+                <p><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp; Speaks: Hindi,
+                    English </p>
+                <p><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline
+                </p>
+        
+                <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i
+                        class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;400 /- </span>
+                <span style="background-color: white;">Per Session</span>
+        
+                <div class="booking">
+                    <div class="booking_box">
+                        <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
+                    </div>
+                    <div class="contact_number">
+                        <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone"
+                                style="background-color: white;"></i>&nbsp;&nbsp; 794 711 5139</h4>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
        
-        <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;5000 /- </span>
-         <span style="background-color: white;">Per Month</span>
-        
-         <!-- <h5 style="background-color: white;">per session</h5> -->
-    <div class="booking">
-        <div class="booking_box">
-            <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
-        </div>
-        <div class="contact_number">
-            <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp; 011 3040 3040</h4>
-        </div>
-    </div>
-    
-    </div>   
-</div>
-    <!-- Section 5 : Dr .Cards  -->
-    <div class="complete_card">
-        <div class="card1_left">
-    
-            <div class="white_box">
-                <div class="part1">
-                    <!-- photo -->
-                    <div class="photod">
-                    <img class="photo" src="./images/rian.jpg">
-                    </div>
-    
-                    <!-- Name and one line -->
-                    <div class="intro">
-                      <h1 class="Name" style="margin-bottom: 10px;"> Dr. Vishal Chhabra</h1>
-                      <h4 class="About_sec" style="word-wrap: normal;font-style: italic ;font-weight: lighter;">Hi, I'm Vishal, a seasoned mental health therapist committed to guiding individuals on their journey to emotional well-being. With 6+ years of experience, I offer a compassionate space for resilience...</h4>
-                    </div>
-    
-                </div>
-    
-                <div class="part2">
-                    <h5 style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 60px;margin: 0px ;height: 20px; align-content: center;"> Therapist </h5>
-                    <h5 style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid; padding: 3px; width: 70px;margin: 0px ;height: 20px; "> Psychiatrist</h5>
-                    <h5 style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 100px;margin: 0px ;height: 20px;"> Couple Therapist </h5>
-                    <h5 style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px"> Consultant </h5>
-                    <h5 style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px"> Depression </h5>
-    
-    
-                </div>
-                
-            
-            </div>
-        </div>
-    
-        <div class="card1_right">
-            <h4 style="background-color: white; margin: 14px 2px 1px 0px; font-weight: lighter; font-style: oblique;"> <i class="fa-solid fa-stethoscope" style="background-color: white;"></i>&nbsp;&nbsp;6+ years of experience </h4>
-            <h4 style="background-color: white; margin: 14px 2px 1px 0px;">
-            <span style="background-color: white;font-weight: lighter;color: black; margin: 14px 2px 1px 0px;" ><i class="fa-regular fa-comment-dots" style="background-color: white;"></i>&nbsp;&nbsp;Speaks:</span>
-                <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;"> Hindi, English</span>
-            </h4>
-    <h4 style="background-color: white; margin: 14px 2px 14px 0px;">
-            <!-- <h4 style="background-color: white;margin: 14px 2px 14px 0px;font-weight: lighter;font-style: oblique"><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline </h4> -->
-            <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black;" ><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode:</span>
-                <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;"> Online, Offline</span>
-    </h4>
-           
-            <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;5000 /- </span>
-             <span style="background-color: white;">Per Month</span>
-            
-             <!-- <h5 style="background-color: white;">per session</h5> -->
-        <div class="booking">
-            <div class="booking_box">
-                <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
-            </div>
-            <div class="contact_number">
-                <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp;  989 105 5258</h4>
-            </div>
-        </div>
-        
-        </div>   
-    </div>
-    
-    </div>
-    <!-- Section 5 : Dr .Cards  -->
-    <div class="complete_card">
-        <div class="card1_left">
-
-            <div class="white_box">
-                <div class="part1">
-                    <!-- photo -->
-                    <div class="photod">
-                        <img class="photo" src="./images/usman.jpg">
-                    </div>
-
-                    <!-- Name and one line -->
-                    <div class="intro">
-                      <h1 class="Name" style="margin-bottom: 10px;"> Dr. Vikas Moun </h1>
-                      <h4 class="About_sec" style="word-wrap: normal;font-style: italic ;font-weight: lighter;">Hi, I'm Vikas, an experienced mental health therapist offering compassionate support and guidance for positive change...</h4>
-                    </div>
-
-                </div>
-
-                <div class="part2">
-                    <h5
-                        style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 60px;margin: 0px ;height: 20px; align-content: center;">
-                        Therapist </h5>
-                    <h5
-                        style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid; padding: 3px; width: 70px;margin: 0px ;height: 20px; ">
-                        Psychiatrist</h5>
-                    <h5
-                        style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px; width: 100px;margin: 0px ;height: 20px;">
-                        Couple Therapist </h5>
-                    <h5
-                        style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px">
-                        Consultant </h5>
-                    <h5
-                        style="border: 1px; border-color: #e6d66e; border-radius: 4px; color: #e6d66e; background-color: white; border-style: solid;padding: 3px;width: 65px;margin: 0px ;height: 20px">
-                        Depression </h5>
-
-
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="card1_right">
-            <h4 style="background-color: white; margin: 14px 2px 1px 0px; font-weight: lighter; font-style: oblique;">
-                <i class="fa-solid fa-stethoscope" style="background-color: white;"></i>&nbsp;&nbsp;2+ years of
-                experience </h4>
-            <h4 style="background-color: white; margin: 14px 2px 1px 0px;">
-                <span style="background-color: white;font-weight: lighter;color: black; margin: 14px 2px 1px 0px;"><i
-                        class="fa-regular fa-comment-dots"
-                        style="background-color: white;"></i>&nbsp;&nbsp;Speaks:</span>
-                <span
-                    style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;">
-                    Hindi, English</span>
-            </h4>
-    <h4 style="background-color: white; margin: 14px 2px 14px 0px;">
-            <!-- <h4 style="background-color: white;margin: 14px 2px 14px 0px;font-weight: lighter;font-style: oblique"><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode: Online, Offline </h4> -->
-            <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black;" ><i class="fa-solid fa-house-medical" style="background-color: white;"></i>&nbsp;&nbsp;Mode:</span>
-                <span style="background-color: white;margin: 14px 2px 1px 0px;font-weight: lighter;color: black; font-style: oblique;"> Online, Offline</span>
-    </h4>
-           
-            <span style="background-color: white; font-weight:bolder; font-size:x-large;"><i class="fa-solid fa-indian-rupee-sign fa-xm" style="background-color: white;"></i>&nbsp;5000 /- </span>
-             <span style="background-color: white;">Per Month</span>
-            
-             <!-- <h5 style="background-color: white;">per session</h5> -->
-        <div class="booking">
-            <div class="booking_box">
-                <h4 style="background-color:#e6d66e; margin: 0px ;font-size: larger;">Book Now </h4>
-            </div>
-            <div class="contact_number">
-                <h4 style="background-color: white; margin: 0px; font-weight: lighter;"><i class="fa-solid fa-phone" style="background-color: white;"></i>&nbsp;&nbsp; 794 711 5139</h4>
-            </div>
-
-        </div>
-    </div>
-
-    </div>
-
-
-    </div>
-
-
-
-
 </body>
 
 </html>
