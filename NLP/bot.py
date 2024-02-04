@@ -169,4 +169,3 @@ def get_response(user_input):
   # Translate back to the detected language
   langtext = GoogleTranslator(source='en', target=detected_language).translate(response)
   return langtext
-

@@ -4,16 +4,18 @@ function search() {
     filter = input.value.toUpperCase();
     var flag = false;
     for(j = 0; j < 3; j++){
-        content = document.getElementsByClassName('intro')[j];
-        p = content.getElementsByTagName('h4');
-        console.log(p);
+        content = document.getElementsByClassName('complete-card')[j];
+        p = content.getElementsByTagName('p');
+        //console.log(p);
         for (i = 0; i < p.length; i++) {
             txtValue = p[i].textContent || p[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                p[i].style.display = '';
+                content.style.display = '';
+                //console.log(p[i]);
                 flag = true;
+                break;
             } else {
-                p[i].style.display = 'none';
+                content.style.display = 'none';
             }
         }
     }
