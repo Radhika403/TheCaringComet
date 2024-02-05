@@ -90,4 +90,11 @@ Caring Comet is your go-to platform for mental wellness and good health. We're o
 
 
 <h3>How to use and set up??</h3>
+<p>
+    1. The website is deployed at - https://the-caring-comet.vercel.app/ 
+    2. For the backend to run on your machine, clone this repostory into your local machine
+    3. Install required libraries using commands in the requirements.txt
+    4. Run the server.py file
 
+    Now you have everything in place, use the website link above to interact with The Caring Comet!
+</p>
