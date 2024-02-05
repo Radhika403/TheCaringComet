@@ -6,10 +6,10 @@
   <img src= "./images/logo.png" alt="logo”" width="350"/>
 </p>
 
-<h3>Abstract:</h3>
+<h3> Abstract: </h3>
 Caring Comet is your go-to platform for mental wellness and good health. We're on a mission to help you build a positive mindset for life's challenges. This is your one-stop destination for a healthier you, our platform is all about making well-being simple and accessible to all. Let this Comet illuminate your path to emotional well-being!!
 
-<h3>Features: 5 pillars that form the backbone of the platform</h3>
+<h3> Features: 5 pillars that form the backbone of the platform </h3>
 
 1. <b>Resource Library 📚</b>
     <p align="center">
@@ -89,12 +89,12 @@ Caring Comet is your go-to platform for mental wellness and good health. We're o
     5. APIs <br>
 
 
-<h3>How to use and set up??</h3>
+<h3>Use and Set Up</h3>
 <p>
-    1. The website is deployed at - https://the-caring-comet.vercel.app/ 
-    2. For the backend to run on your machine, clone this repostory into your local machine
-    3. Install required libraries using commands in the requirements.txt
-    4. Run the server.py file
-
-    Now you have everything in place, use the website link above to interact with The Caring Comet!
+    1. The website is deployed at - https://the-caring-comet.vercel.app/ <br>
+    2. For the backend to run on your machine, clone this repostory into your local machine <br>
+    3. Install required libraries using commands in the requirements.txt <br>
+    4. Run the server.py file <br>
+    <br>
+    Now you have everything in place, use the website link above to interact with The Caring Comet
 </p>
