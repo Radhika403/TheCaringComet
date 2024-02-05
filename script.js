@@ -111,9 +111,29 @@ function showInformation() {
     logoDiv.style.display = 'none';
 }
 
-function resetForm() {
-    var mssg = document.getElementById("msg");
-    mssg.innerHTML = "Form successfully submitted!!"
-    document.querySelector(".contact-left").reset();
+function submitForm(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const formData = new FormData(event.target);
+
+    // Make an asynchronous request to the Web3Forms API
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response data if needed
+        console.log(data);
+        document.getElementById('msg').innerText = 'Form submitted successfully!';
+
+        // Optionally, reset the form
+        event.target.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('msg').innerText = 'Error submitting the form.';
+    });
 }
 
